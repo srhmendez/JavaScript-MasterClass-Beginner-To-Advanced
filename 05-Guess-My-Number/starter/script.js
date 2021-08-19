@@ -10,6 +10,7 @@ let score = document.querySelector('.score');
 let secretNumber = getRandomNum();
 let currentScore = Number(score.textContent);
 let highScore = Number(document.querySelector('.highscore').textContent);
+let displayHighScore = document.querySelector('.highscore');
 let guess = document.querySelector('.guess');
 let background = document.querySelector('body');
 let message = document.querySelector('.message');
@@ -17,7 +18,7 @@ let secretNumberDisplay = document.querySelector('.number');
 
 
 
-
+//Console log for testing easily
 console.log(`This is the Secret Number: ${secretNumber}`)
 
 let checkGuess = function() {
@@ -36,10 +37,14 @@ let checkGuess = function() {
         secretNumberDisplay.textContent = secretNumber;
         currentScore = getCurrentScore();
         if (Number(score.textContent) > highScore) {
-            document.querySelector('.highscore').textContent = currentScore;
+            console.log(currentScore)
+            console.log(highScore)
+            highScore = currentScore;
+            displayHighScore.textContent = currentScore;
         }
         secretNumber = getRandomNum();
         console.log(`The new Secret Number is: ${secretNumber}`);
+
     //When guess is too low
     } else if (guessValue < secretNumber){
         if (currentScore != 0) {
