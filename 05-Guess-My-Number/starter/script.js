@@ -20,6 +20,7 @@ let checkGuess = function() {
         document.querySelector('body').style.backgroundColor = '#60b347';
 
         document.querySelector('.number').style.width = '30rem'
+        document.querySelector('.number').textContent = secretNumber;
     //When guess is too low
     } else if (guess < secretNumber){
         if (currentScore = 0) {
@@ -50,7 +51,5 @@ let refreshPage = function() {
 }
 
 
-
-document.querySelector('.number').textContent = secretNumber;
 document.querySelector('.check').addEventListener('click', checkGuess);
 document.querySelector('.again').addEventListener('click', refreshPage);
