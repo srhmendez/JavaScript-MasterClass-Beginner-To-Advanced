@@ -10,4 +10,4 @@ In this project I explored basic JS6 principles like the following:
 - Game Logic
 - Edge Cases
 
-[https://05-guess-my-number.netlify.app] (Play Guess My Number Game)
+[Play Guess My Number Game](https://05-guess-my-number.netlify.app)
